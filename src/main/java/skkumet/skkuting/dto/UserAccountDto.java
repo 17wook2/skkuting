@@ -15,7 +15,11 @@ public record UserAccountDto(String email, String nickname, String password, Int
         }
 
         public static UserAccountDto of(String email, String nickname, String password) {
-                return new UserAccountDto(email, nickname, password, null, null, null, null, null, null);
+                return UserAccountDto.of(email, nickname, password, null, null, null, null, null, null);
+        }
+
+        public static UserAccountDto of(String email) {
+                return UserAccountDto.of(email,null,null);
         }
 
 

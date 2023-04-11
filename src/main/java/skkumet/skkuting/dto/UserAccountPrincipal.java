@@ -43,6 +43,12 @@ public record UserAccountPrincipal(
         );
     }
 
+    public UserAccountDto todto() {
+        return UserAccountDto.of(
+                email
+        );
+    }
+
 
 
     @Override public Collection<? extends GrantedAuthority> getAuthorities() { return authorities; }
